@@ -1,0 +1,34 @@
+{
+    "name": "deg540/cleancode-kata-9",
+    "description": "Clean code Kata cap. 9. Unit testing",
+    "type": "project",
+    "require": {
+        "php": "^7.1",
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.5",
+        "php-vcr/php-vcr": "^1.3"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Deg540\\CleanCodeKata9\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Deg540\\CleanCodeKata9\\Test\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
+    },
+    "scripts": {
+        "test": [
+            "parallel-lint . --exclude vendor",
+            "phpunit --configuration phpunit.xml"
+        ]
+    }
+}
